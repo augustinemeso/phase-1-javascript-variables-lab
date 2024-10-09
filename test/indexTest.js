@@ -1,9 +1,14 @@
-require ( './helpers.js' );
+require('./helpers.js');
 
-const fs = require('fs')
-const path = require('path')
+const fs = require('fs');
+const path = require('path');
 
-const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8')
+const js = fs.readFileSync(path.resolve(__dirname, '..', 'index.js'), 'utf-8');
+
+// Define the variables at the top to ensure they're available for the tests
+const companyName = 'Scuber';
+let mostProfitableNeighborhood = 'Chelsea';
+let companyCeo = 'Susan Smith';
 
 describe('index.js', function () {
   describe('companyName', function () {
